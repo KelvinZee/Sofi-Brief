@@ -1004,9 +1004,11 @@ const SectionHeader = ({ num, label, title, lead }) => (
       <span className="font-mono text-xs text-stone-600 tabular-nums">§ {num}</span>
       <Eyebrow>{label}</Eyebrow>
     </div>
-    <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-stone-100 leading-[1.05] mb-6 max-w-4xl">
-      {title}
-    </h2>
+    {title && (
+      <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-stone-100 leading-[1.05] mb-6 max-w-4xl">
+        {title}
+      </h2>
+    )}
     {lead && (
       <p className="font-body text-lg md:text-xl text-stone-400 leading-relaxed max-w-3xl">
         {lead}
@@ -1118,7 +1120,7 @@ const SetupSection = () => (
       <SectionHeader
         num="02"
         label="The Setup"
-        title="SoFi has the scale, product breadth, and member growth; the leak is benefit coherence, so Plus should be validated through trust, behavior, and economics."
+        title=""
         lead="From the outside, SoFi Plus appears to be moving from a status layer into something more load-bearing: a paid membership that has to connect banking, investing, credit, lending, rewards, and planning into one understandable member promise."
       />
 
