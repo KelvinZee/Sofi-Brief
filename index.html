@@ -107,52 +107,8 @@
       linear-gradient(180deg, #ffffff 0%, var(--sofi-bg) 22%, #ffffff 100%) !important;
     color: var(--sofi-navy) !important;
     font-family: Inter, Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-    padding-top: 72px;
   }
 
-  body::before {
-    content: "SoFi   Products   Member Benefits   Resources   About   Investors";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 72px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    padding: 0 max(28px, calc((100vw - 1180px) / 2));
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(0, 163, 173, 0.16);
-    color: var(--sofi-navy);
-    font-family: Inter, Avenir Next, ui-sans-serif, system-ui, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    word-spacing: 26px;
-    box-shadow: 0 8px 30px rgba(7, 36, 54, 0.05);
-  }
-
-  body::after {
-    content: "Get Started";
-    position: fixed;
-    top: 17px;
-    right: max(28px, calc((100vw - 1180px) / 2));
-    z-index: 10000;
-    height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border-radius: 999px;
-    color: #fff;
-    background: linear-gradient(135deg, var(--sofi-teal), var(--sofi-blue));
-    font-family: Inter, Avenir Next, ui-sans-serif, system-ui, sans-serif;
-    font-size: 12px;
-    font-weight: 800;
-    box-shadow: 0 12px 24px rgba(0, 132, 154, 0.25);
-  }
 
   * { text-rendering: optimizeLegibility; }
   .font-display,
@@ -457,23 +413,9 @@
   /* Softer print/export behavior */
   @media print {
     body { padding-top: 0 !important; background: #fff !important; }
-    body::before, body::after { display: none !important; }
     #root > section { page-break-inside: avoid; }
   }
 
-  @media (max-width: 900px) {
-    body { padding-top: 64px; }
-    body::before {
-      content: "SoFi   Strategic Brief";
-      height: 64px;
-      word-spacing: 12px;
-      padding: 0 20px;
-    }
-    body::after { display: none; }
-    #root > section:first-child { padding-top: 64px !important; }
-    #root > section:first-child::before,
-    #root > section:first-child::after { display: none !important; }
-  }
 </style>
 
 
